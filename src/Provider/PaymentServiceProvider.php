@@ -1,11 +1,11 @@
 <?php
 
-namespace Shetabit\Payment\Provider;
+namespace Tookantech\Payment\Provider;
 
-use Shetabit\Multipay\Payment;
+use Tookantech\Multipay\Payment;
 use Illuminate\Support\ServiceProvider;
-use Shetabit\Payment\Events\InvoicePurchasedEvent;
-use Shetabit\Payment\Events\InvoiceVerifiedEvent;
+use Tookantech\Payment\Events\InvoicePurchasedEvent;
+use Tookantech\Payment\Events\InvoiceVerifiedEvent;
 
 class PaymentServiceProvider extends ServiceProvider
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Shetabit\Payment\Events;
+namespace Tookantech\Payment\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
@@ -9,8 +9,8 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
-use Shetabit\Multipay\Contracts\DriverInterface;
-use Shetabit\Multipay\Invoice;
+use Tookantech\Multipay\Contracts\DriverInterface;
+use Tookantech\Multipay\Invoice;
 
 class InvoicePurchasedEvent
 {
