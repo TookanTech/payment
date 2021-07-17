@@ -1,21 +1,21 @@
 <?php
 
-namespace Shetabit\Payment\Tests;
+namespace Tookantech\Payment\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use Shetabit\Payment\Tests\Mocks\Drivers\BarDriver;
+use Tookantech\Payment\Tests\Mocks\Drivers\BarDriver;
 
 class TestCase extends BaseTestCase
 {
     protected function getPackageProviders($app)
     {
-        return ['Shetabit\Payment\Provider\PaymentServiceProvider'];
+        return ['Tookantech\Payment\Provider\PaymentServiceProvider'];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'Payment' => 'Shetabit\Payment\Facade\Payment',
+            'Payment' => 'Tookantech\Payment\Facade\Payment',
         ];
     }
 

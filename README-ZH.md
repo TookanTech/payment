@@ -101,13 +101,13 @@ a. 在你的 `config/app.php` 文件中，添加如下两行
 // In your providers array.
 'providers' => [
     ...
-    Shetabit\Payment\Provider\PaymentServiceProvider::class,
+    Tookantech\Payment\Provider\PaymentServiceProvider::class,
 ],
 
 // In your aliases array.
 'aliases' => [
     ...
-    'Payment' => Shetabit\Payment\Facade\Payment::class,
+    'Payment' => Tookantech\Payment\Facade\Payment::class,
 ],
 ```
 
@@ -153,7 +153,7 @@ b. 然后运行 `php artisan vendor:publish` 来发布 `config/payment.php` 文�
 
 ```php
 // At the top of the file.
-use Shetabit\Multipay\Invoice;
+use Tookantech\Multipay\Invoice;
 ...
 
 // Create new invoice.
@@ -193,8 +193,8 @@ $invoice->detail('detailName1','your detail1 goes here')
 
 ```php
 // At the top of the file.
-use Shetabit\Multipay\Invoice;
-use Shetabit\Payment\Facade\Payment;
+use Tookantech\Multipay\Invoice;
+use Tookantech\Payment\Facade\Payment;
 ...
 
 // Create new invoice.
@@ -225,8 +225,8 @@ Payment::callbackUrl('http://yoursite.com/verify')->purchase(
 
 ```php
 // At the top of the file.
-use Shetabit\Multipay\Invoice;
-use Shetabit\Payment\Facade\Payment;
+use Tookantech\Multipay\Invoice;
+use Tookantech\Payment\Facade\Payment;
 ...
 
 // Create new invoice.
@@ -262,8 +262,8 @@ return Payment::purchase(
 
 ```php
 // At the top of the file.
-use Shetabit\Payment\Facade\Payment;
-use Shetabit\Multipay\Exceptions\InvalidPaymentException;
+use Tookantech\Payment\Facade\Payment;
+use Tookantech\Multipay\Exceptions\InvalidPaymentException;
 ...
 
 // 您需要验证支付机构的回传数据，以确保付款成功
@@ -294,8 +294,8 @@ getMessage方法，返回可在用户界面中使用的适当消息。
 
   ```php
   // At the top of the file.
-  use Shetabit\Multipay\Invoice;
-  use Shetabit\Payment\Facade\Payment;
+  use Tookantech\Multipay\Invoice;
+  use Tookantech\Payment\Facade\Payment;
   ...
   
   // Create new invoice.
@@ -314,8 +314,8 @@ getMessage方法，返回可在用户界面中使用的适当消息。
 
   ```php
   // At the top of the file.
-  use Shetabit\Multipay\Invoice;
-  use Shetabit\Payment\Facade\Payment;
+  use Tookantech\Multipay\Invoice;
+  use Tookantech\Payment\Facade\Payment;
   ...
   
   // Purchase (we set invoice to null).
@@ -331,8 +331,8 @@ getMessage方法，返回可在用户界面中使用的适当消息。
 
   ```php
   // At the top of the file.
-  use Shetabit\Multipay\Invoice;
-  use Shetabit\Payment\Facade\Payment;
+  use Tookantech\Multipay\Invoice;
+  use Tookantech\Payment\Facade\Payment;
   ...
   
   // Create new invoice.
@@ -351,8 +351,8 @@ getMessage方法，返回可在用户界面中使用的适当消息。
 
   ```php
   // At the top of the file.
-  use Shetabit\Multipay\Invoice;
-  use Shetabit\Payment\Facade\Payment;
+  use Tookantech\Multipay\Invoice;
+  use Tookantech\Payment\Facade\Payment;
   ...
   
   // Create new invoice.
@@ -389,16 +389,16 @@ getMessage方法，返回可在用户界面中使用的适当消息。
 ```
 
 现在您必须创建一个将用于支付清单的驱动程序映射类。
-在你的驱动中，你必须继承 `Shetabit\Payment\Abstracts\Driver`.这个类
+在你的驱动中，你必须继承 `Tookantech\Payment\Abstracts\Driver`.这个类
 
 例如，你创建了这样一个类: `App\Packages\PaymentDriver\MyDriver`。
 
 ```php
 namespace App\Packages\PaymentDriver;
 
-use Shetabit\Multipay\Abstracts\Driver;
-use Shetabit\Multipay\Exceptions\InvalidPaymentException;
-use Shetabit\Multipay\{Contracts\ReceiptInterface, Invoice, Receipt};
+use Tookantech\Multipay\Abstracts\Driver;
+use Tookantech\Multipay\Exceptions\InvalidPaymentException;
+use Tookantech\Multipay\{Contracts\ReceiptInterface, Invoice, Receipt};
 
 class MyDriver extends Driver
 {

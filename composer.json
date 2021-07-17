@@ -1,5 +1,5 @@
 {
-    "name": "shetabit/payment",
+    "name": "tookantech/payment",
     "type": "library",
     "description": "Laravel Payment Gateway Integration Package",
     "keywords": [
@@ -87,7 +87,7 @@
         "php": ">=7.2",
         "illuminate/broadcasting": "^5.0|^6.0|^7.0|^8.0",
         "illuminate/support": "^5.0|^6.0|^7.0|^8.0",
-        "shetabit/multipay": "^1.0"
+        "tookantech/multipay": "^1.0"
     },
     "suggest": {
         "ext-soap": "Needed to support some drivers that required SOAP"
@@ -99,12 +99,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Shetabit\\Payment\\": "src"
+            "Tookantech\\Payment\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Shetabit\\Payment\\Tests\\": "tests"
+            "Tookantech\\Payment\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -115,10 +115,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Shetabit\\Payment\\Provider\\PaymentServiceProvider"
+                "Tookantech\\Payment\\Provider\\PaymentServiceProvider"
             ],
             "aliases": {
-                "Payment": "Shetabit\\Payment\\Facade\\Payment"
+                "Payment": "Tookantech\\Payment\\Facade\\Payment"
             }
         }
     },

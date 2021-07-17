@@ -1856,7 +1856,7 @@
             "time": "2020-08-18T17:17:46+00:00"
         },
         {
-            "name": "shetabit/multipay",
+            "name": "tookantech/multipay",
             "version": "v1.6.0",
             "source": {
                 "type": "git",
@@ -1882,7 +1882,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Shetabit\\Multipay\\": "src"
+                    "Tookantech\\Multipay\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
